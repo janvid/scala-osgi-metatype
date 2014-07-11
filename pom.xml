@@ -2,13 +2,17 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>org.helgoboss</groupId>
-        <artifactId>my-scala-oss-parent</artifactId>
-        <version>1.0.0</version>
-        <relativePath />
-    </parent>
+    <distributionManagement>
+      <repository>
+        <uniqueVersion>false</uniqueVersion>
+        <id>janrain-snapshots</id>
+        <name>Janrain Artifactory</name>
+        <url>http://janrain.artifactoryonline.com/janrain/janrain-snapshots</url>
+        <layout>default</layout>
+      </repository>
+    </distributionManagement>
 
+    <groupId>org.helgoboss</groupId>
     <artifactId>scala-osgi-metatype</artifactId>
     <version>1.0.1-SNAPSHOT</version>
     <packaging>bundle</packaging>
@@ -85,7 +89,7 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
-                        <Import-Package>scala*;version="[2.10,2.11)",*</Import-Package>
+                        <Import-Package>scala*;version="[2.11,2.12)",*</Import-Package>
                     </instructions>
                 </configuration>
             </plugin>
